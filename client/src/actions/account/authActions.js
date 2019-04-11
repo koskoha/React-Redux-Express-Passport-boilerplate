@@ -75,7 +75,7 @@ export const registerUser = (userData, history) => dispatch => {
       url: '/register',
       data: userData,
     })
-      .then(() => history.push('/account'))
+      .then(() => history.push('/employee/list'))
       .catch(err =>
         dispatch({
           type: GET_ERRORS,

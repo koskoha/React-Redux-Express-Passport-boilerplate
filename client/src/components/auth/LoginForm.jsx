@@ -84,7 +84,7 @@ class LoginForm extends Component {
           timer: 1000,
         })
         .then(() => {
-          history.push('/account');
+          history.push('/employee');
         });
     }
   }
@@ -95,7 +95,7 @@ class LoginForm extends Component {
 
   UNSAFE_componentWillReceiveProps(nextProps, nextState) {
     if (nextProps.auth.isAuthenticated) {
-      nextProps.history.push('/account');
+      nextProps.history.push('/employee/list');
     }
 
     if (nextProps.errors) {
